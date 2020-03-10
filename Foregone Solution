@@ -1,0 +1,35 @@
+"""
+Google code jam 2019 Foregone problem
+input
+===========
+3
+4
+940
+4444
+============
+output
+============
+Case #1: 2 2
+Case #2: 852 88
+Case #3: 667 3777
+============
+"""
+
+def stringSolution(test: int, s_number: str):
+    val1 = ""
+    val2 = ""
+    for c in s_number:
+        if(c == "4"):
+            val1 += "2"
+            val2 += "2"
+        else:
+            val1 += "0"
+            val2 += c
+    print("Case #{}: {} {}".format(test, val1.lstrip("0"), val2.lstrip("0")))
+
+t = int(input()) # read a line with a single integer
+for i in range(1, t + 1):
+  s_number = input() # read a list of integers, 2 in this case
+  #splitNrs(i, number)
+  stringSolution(i, s_number)
+  # check out .format's specification for more formatting options
